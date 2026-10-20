@@ -6,9 +6,13 @@ namespace GymReservationApp
 {
     internal class SingleReservation : GymReservation
     {
-        public string ContactName { get; private set; }
-        public int ReservationTime { get; private set; }
-        public bool HasSeasonTicket { get; private set; } = false;
+        private string contactName;
+        private int reservationTime;
+        private bool hasSeasonTicket;
+
+        public string ContactName { get => contactName; private set => contactName = value; }
+        public int ReservationTime { get => reservationTime; private set => reservationTime = value; }
+        public bool HasSeasonTicket { get => hasSeasonTicket; private set => hasSeasonTicket = value; }
 
         public SingleReservation(string contactName, int reservationTime)
         {
